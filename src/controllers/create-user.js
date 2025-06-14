@@ -43,7 +43,7 @@ export class CreateUserController {
             return created(createdUser)
         } catch (error) {
             console.error(error)
-            return serverError
+            return serverError()
         }
     }
 }
