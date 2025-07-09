@@ -13,11 +13,11 @@ export class PostgresUpdateUserRepository {
         updateValues.push(userId)
 
         const updateQuery = `
-      UPDATE users
-      SET ${updateFields.join(', ')}
-      WHERE id = $${updateValues.length}
-      RETURNING *
-    `
+                UPDATE users
+                SET ${updateFields.join(', ')}
+                WHERE id = $${updateValues.length}
+                RETURNING *
+        `
 
         const updatedUser = await PostgresHelper.query(
             updateQuery,
