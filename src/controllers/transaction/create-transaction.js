@@ -39,14 +39,14 @@ export class CreateTRansactionController {
                 return invalidIdResponse()
             }
 
-            if (params.amout <= 0) {
+            if (params.amount <= 0) {
                 return badRequest({
                     message: 'The amount must be greater than 0.',
                 })
             }
 
             const amountIsValid = validator.isCurrency(
-                params.amout.toString(),
+                params.amount.toString(),
                 {
                     digits_after_decimal: [2],
                     allow_negatives: false,
