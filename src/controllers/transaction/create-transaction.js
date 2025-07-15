@@ -8,7 +8,7 @@ import {
     serverError,
 } from '../helpers'
 
-export class CreateTRansactionController {
+export class CreateTransactionController {
     constructor(createTransactionUseCase) {
         this.createTransactionUseCase = createTransactionUseCase
     }
