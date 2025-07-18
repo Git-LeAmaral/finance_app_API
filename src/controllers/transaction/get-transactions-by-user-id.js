@@ -8,7 +8,7 @@ import {
     userNotFoundResponse,
 } from '../helpers/index.js'
 
-export class GetTransactionsByUserId {
+export class GetTransactionsByUserIdController {
     constructor(getTransactionsByUSerIdUseCase) {
         this.getTransactionsByUSerIdUseCase = getTransactionsByUSerIdUseCase
     }
