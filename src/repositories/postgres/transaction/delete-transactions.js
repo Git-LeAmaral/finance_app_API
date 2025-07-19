@@ -1,9 +1,9 @@
-import { PostgresHelper } from '../../../db/postgres/helper'
+import { PostgresHelper } from '../../../db/postgres/helper.js'
 
 export class PostgresDeleteTransactionsRepository {
     async execute(transactionId) {
         const transaction = await PostgresHelper.query(
-            'DELETE FROM transactionsm WHERE id = $1 RETURNING *',
+            'DELETE FROM transactions WHERE id = $1 RETURNING *',
             [transactionId],
         )
 
